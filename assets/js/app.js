@@ -1,4 +1,4 @@
-const numeroSecreto = Math.floor((Math.random() * numeroMax) + 1);
+const numeroSecreto = Math.floor((Math.random() * 100) + 1);
 let tentativas = 0
 let numerosJaDigitados = [];
 

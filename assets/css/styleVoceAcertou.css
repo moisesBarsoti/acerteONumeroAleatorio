@@ -14,7 +14,6 @@
     --black: #000;
     --transparente-04: rgba(255,255,255,0.4);
     --white: #fff;
-    --blue: #1875E8;
 }
 
 body {
@@ -46,7 +45,7 @@ main {
     align-items: center;
     justify-content: space-between;
     border-radius: 24px;
-    border: solid 1px var(--blue);
+    border: 1px solid #1875E8;
     box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
     background-image: url("../img/Ruido.png");
     background-size: 100% 100%;
@@ -72,41 +71,34 @@ section {
     gap: 1rem;
 }
 
-/* Titulo */
 h1 {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 72px;
 }
 
-/* Enviando e recebendo número */
-input,
-button {
-    width: 100%;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    color: var(--black);
-}
-
-button {
+h2 {
     font-family: 'Inter', sans-serif;
-    cursor: pointer;
-    transition: all .5s;
+    font-size: 32px;
+    font-weight: 400;
 }
 
-button:hover {
-    background: var(--transparente-04);
-
-}
-
-/* Tentativa de acertos e de números digitados */
-#feedback {
+#linkVoltar {
     display: flex;
     justify-content: center;
-    padding: 1rem;
-    
-    font-weight: bold;
-    background: var(--transparente-04);
+    margin: 5% 0;
+}
+
+a {
     border-radius: 10px;
+    padding: 1rem 3rem;
+    color: var(--black);
+    font-size: 2rem;
+    background: var(--white);
+    transition: .5s;
+}
+
+a:hover {
+    background: var(--transparente-04);
 }
 
 /* Responsividade */
@@ -114,6 +106,10 @@ button:hover {
 
     html {
         font-size: 70%;
+    }
+
+    main {
+        height: 100vh;
     }
 
     section {
