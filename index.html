@@ -22,7 +22,8 @@
                     <input 
                     type="number" 
                     placeholder="Digite um número de 0 a 100"
-                    autofocus>
+                    autofocus
+                    oninput="if(this.value.length > 3) this.value = this.value.slice(0,3)">
                     <button>Enviar número</button>    
                     <div id="feedback">
                         Aqui vai aparecer se está perto do número secreto
