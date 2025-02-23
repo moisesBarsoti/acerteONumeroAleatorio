@@ -1,17 +1,33 @@
-// Gerando número aleatório
-const numeroSecreto = Math.floor((Math.random() * 100) + 1);
-let tentativas = 0
+// Selecionar Elementos
+function selecionarElemento(tag) {
+    return  document.querySelector(tag);
+}
+
+// Gerar número aleatório 
+function gerarNumRandom(numMax) {
+    return Math.floor((Math.random() * numMax) + 1);
+}
+
+// Ir para outra página
+function linkParaPagina(url) {
+    return window.location.href = url;
+}
+
+
+// Gerando número secreto
+const numeroSecreto = gerarNumRandom(100);
+let tentativas = 0;
 let numerosJaDigitados = [];
 
 // Clique do botão para enviar o número
-const button = document.querySelector('button');
+const button = selecionarElemento('button');
 
 button.addEventListener('click', function () {
-    let input = document.querySelector('input');
+    let input = selecionarElemento('input');
     const inputUmValorInt = parseInt(input.value);
-    const feedback = document.querySelector('#feedback');
-    const tentativasDisplay = document.querySelector('#tentativas');
-    const numerosDigitados = document.querySelector('#numerosDigitados');
+    const feedback = selecionarElemento('#feedback');
+    const tentativasDisplay = selecionarElemento('#tentativas');
+    const numerosDigitados = selecionarElemento('#numerosDigitados');
 
     tentativas++
     numerosJaDigitados.push(inputUmValorInt);
@@ -19,7 +35,7 @@ button.addEventListener('click', function () {
     // Condições
     if (numeroSecreto === inputUmValorInt) {
         console.log(`Você acertou o número secreto! ${numeroSecreto}`);
-        window.location.href = 'voceAcertou.html';
+        linkParaPagina('voceAcertou.html');
     } else if (numeroSecreto < inputUmValorInt) {
         feedback.textContent = `O número secreto é menor que: ${inputUmValorInt}`
         console.log(`O número secreto é menor que: ${inputUmValorInt}`);
