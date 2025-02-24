@@ -34,14 +34,11 @@ button.addEventListener('click', function () {
     
     // Condições
     if (numeroSecreto === inputUmValorInt) {
-        console.log(`Você acertou o número secreto! ${numeroSecreto}`);
         linkParaPagina('voceAcertou.html');
     } else if (numeroSecreto < inputUmValorInt) {
         feedback.textContent = `O número secreto é menor que: ${inputUmValorInt}`
-        console.log(`O número secreto é menor que: ${inputUmValorInt}`);
     } else {
         feedback.textContent = `O número secreto é maior que: ${inputUmValorInt}`
-        console.log(`O número secreto é maior que: ${inputUmValorInt}`);
     }
 
     // Palavras do singular para o plural
